@@ -1,3 +1,3 @@
-c / c++ - shell & websockets
+Shell features system calls, forking, multithreading, redirection and piping.
 
-python - robot server code
+Websockets features a client server, sockets, polling and messaging system for strings.
