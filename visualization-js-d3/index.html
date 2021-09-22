@@ -1,0 +1,74 @@
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>World Launch Sites</title>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js"></script>
+  <script src="https://d3js.org/topojson.v2.min.js"></script>
+  <script src='js/SpaceLaunch.js'></script>
+
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://unpkg.com/d3-simple-slider"></script>
+  <style>
+    .axis path,
+    .axis line {
+      fill: none;
+      stroke: #000;
+      shape-rendering: crispEdges;
+    }
+  </style>
+  <link
+          rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous"
+  />
+</head>
+<body onload="init()"> <!-- init() method defined in coffee.js-->
+<div class="row align-items-center">
+  <div class="col-sm-2"><p id="value-simple">Start Year:</p></div>
+  <div class="col-sm"><div id="slider-simple"></div></div>
+</div>
+<div></div>
+<div class="row align-items-center">
+  <div class="col-sm-2"><p id="value-simple2">End Year:</p></div>
+  <div class="col-sm"><div id="slider-simple2"></div></div>
+</div>
+<div id="checkboxes"></div>
+  <div style="display: table-cell; width: 325;">
+    <label for="catDropdown">Launch Categories: </label>
+    <select id="catDropdown" multiple>
+      <option val="Atmosphere">Atmosphere</option>
+      <option val="Deep Space">Deep Space</option>
+      <option val="High Altitude">High Altitude</option>
+      <option val="Military">Military</option>
+      <option val="Orbital">Orbital</option>
+      <option val="Reentry">Reentry</option>
+      <option val="Suborbital">Suborbital</option>
+      <option val="Suborbital Human Crew">Suborbital Human Crew</option>
+      <option val="Test">Test</option>
+    </select>
+  </div>
+  <div style="display: table-cell; width: 150;">
+    <button id="update" onclick="updateClicked()">Update</button>
+  </div>
+</div>
+
+<div id="checkboxes2"></div>
+  <div style="display: table-cell; width: 325;">
+    <label for="catDropdown2">Size:\n </label>
+    <select id="catDropdown2" multiple>
+      <option val="Success">Success</option>
+      <option val="Failure">Failure</option>
+    </select>
+  </div>
+  <div style="display: table-cell; width: 150;">
+    <button id="update" onclick="updateClicked()">Update</button>
+  </div>
+</div>
+
+
+<div id="vis"></div>
+
+</body>
+</html>
